@@ -1,6 +1,6 @@
 # Expert-System
 
-Expert system is a proposal calculation program
+Expert system is a proposal calculation program using a backward chaining algorithm
 
 ## Usage
 
