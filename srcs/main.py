@@ -1,20 +1,26 @@
+from parse import Parser
 import math
 import os
 import sys
 
-def error():
-	exit
+USAGE = 'Usage : python3 main.py [file_location]'
+
+def error(reason):
+	exit(reason + USAGE)
+
+def get_file():
+	if len(sys.argv) == 1:
+		 error('No arguments\n')
+	elif len(sys.argv) > 2:
+		error('Too many arguments!\n')
+	os.getcwd()
+	filename = sys.argv[1]
+	file = open(filename, "r")
+	return file
 
 def main():
-	if len(sys.argv) == 1:
-		exit('There is no input arguments!' + '\n' + USAGE)
-	elif len(sys.argv) > 2:
-		exit('Too many arguments!' + '\n' + USAGE)
-
-	filename = argv[1]
-	os.getcwd()
-	file = open("ressources/test1", "r")
-
+	file = get_file()
+	Parser.parsing(file)
 	file.close()
 
 if __name__ == '__main__':
