@@ -49,6 +49,7 @@ a <=> C : A if and only if C
 ```
 #this is a comment
 
+#Rules :
 C => E
 A + B + C => D
 A | B => C
@@ -61,7 +62,9 @@ E + F => !V
 A + B <=> C
 A + B <=> !C
 
+#Initial facts :
 =ABG
 
+#Queries :
 ?GVX 
 ```
